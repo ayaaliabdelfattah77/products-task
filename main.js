@@ -1,7 +1,7 @@
 
 let myyButton = document.getElementById("btn")
 let body = document.body
-// let myTitle = document.getElementById("title")
+
 
 myyButton.addEventListener("click", function(){
   if(body.classList.contains("light")){
@@ -295,7 +295,7 @@ myBtn.addEventListener("click", function(){
 
 myLi.forEach(li => {
   li.addEventListener("click", () => {
-    const selectedCategory = li.textContent; // نص العنصر اللي اتضغط
+    const selectedCategory = li.textContent; 
     cards.innerHTML = "";
     
     const filteredProducts = products.filter(product => product.category === selectedCategory);
@@ -311,7 +311,7 @@ myLi.forEach(li => {
        <p>${product.category}</p>
       `;
       cards.appendChild(card);
-          // اختياري: اقفل الدروبداون بعد الاختيار
+
     myDropDawn.classList.remove("show");
       
     });
@@ -319,13 +319,5 @@ myLi.forEach(li => {
   });
  
 });
-// myLi.addEventListener("click", function(){
 
-// })
-
-//    const filteredProducts = products.filter(product => {
-//   if (product.category === myLi) {
-
-    
-//    }})
 

@@ -1,0 +1,181 @@
+/* --- عام للصفحة --- */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #f9f7f1, #e0f7fa);
+  margin: 0;
+  padding: 20px;
+    transition: background 0.3s, color 0.3s;
+
+}
+
+/* --- الزر --- */
+#toggle {
+  background-color: #ff6f61;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  cursor: pointer;
+  font-size: 18px;
+  border-radius: 8px;
+  transition: background 0.3s ease;
+  margin-bottom: 10px;
+}
+
+#toggle:hover {
+  background-color: #ff3b2e;
+}
+
+/* --- الدروبداون --- */
+.dropdown {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px 0;
+  display: none; /* افتراضي مخفي */
+  background-color: #ffffff;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  max-width: 250px;
+}
+
+.dropdown.show {
+  display: block;
+}
+
+.dropdown li {
+  padding: 12px 20px;
+  cursor: pointer;
+  border-bottom: 1px solid #eee;
+  transition: background 0.2s;
+}
+
+.dropdown li:hover {
+  background-color: #fce4ec;
+  color: #d81b60;
+}
+
+/* --- الحاوية للكروت --- */
+#cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+
+/* حاوية الكارت */
+.div1, .card {
+  position: relative; /* مهم عشان يكون المرجع للعنصر المطلق */
+  background: linear-gradient(145deg, #ffffff, #07a9cd); /* ألوان واضحة وجذابة */
+  border-radius: 15px;
+  padding: 20px;
+  width: 220px;
+  text-align: center;
+  box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.div1:hover, .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 20px rgba(0,0,0,0.3);
+}
+
+.div1 img, .card img {
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
+
+.div1 h1, .card h1 {
+  font-size: 18px;
+  color: #333;
+  margin: 10px 0;
+}
+
+.div1 h5, .card h5 {
+  font-size: 16px;
+  color: #ffffff;
+  margin: 5px 0;
+  background-color: #d81b60;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+/* الكاتيجوري مطلقة أعلى الكارت */
+.div1 p, .card p {
+  position: absolute;
+  top: -20px; /* فوق الكارت */
+  left: 30%;
+  transform: translateX(-50%);
+  background-color: #cb100d; /* أحمر */
+  color: #fff;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+#welcome {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  background: linear-gradient(135deg, #1e3c72, #2a5298); /* تدرج أزرق جذاب */
+  font-weight: bold;
+  font-size: 50px;
+  color: #c822ba; /* لون  للخط */
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5); /* ظل جميل للنص */
+  border-radius: 15px;
+  box-shadow: 0 0 50px rgba(0,0,0,0.4);
+  
+  z-index: 1000;
+  animation: fadeInOut 2s ease forwards; /* حركة دخول وخروج بسيطة */
+}
+
+/* حركة fade in/out */
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1);
+  }
+}
+
+.div1 {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 10px;
+}
+
+body.light {
+    background-color: #f9f7f1;
+    color: black;
+}
+
+body.dark {
+    background: black !important;
+    color: #fce4ec;
+}
+#btn{
+  border: none;
+  padding: 5px;
+  font-size: 30px;
+  height: 50px;
+  background-color: transparent;
+}
+
+
